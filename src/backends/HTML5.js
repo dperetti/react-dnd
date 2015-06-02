@@ -179,14 +179,14 @@ class HTML5Backend {
 
     node.setAttribute('draggable', true);
     node.addEventListener('dragstart', handleDragStart);
-    node.addEventListener('selectstart', handleSelectStart);
+    //node.addEventListener('selectstart', handleSelectStart);
 
     return () => {
       delete this.sourceNodes[sourceId];
       delete this.sourceNodeOptions[sourceId];
 
       node.removeEventListener('dragstart', handleDragStart);
-      node.removeEventListener('selectstart', handleSelectStart);
+      //node.removeEventListener('selectstart', handleSelectStart);
       node.setAttribute('draggable', false);
     };
   }
